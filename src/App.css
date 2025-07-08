@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6f6988;
+}
+
+.to-do-app {
+    font-family: sans-serif;
+    background-color: #3d0c7e;
+    max-width: 500px;
+    width: 100%;
+    margin: 15% 30%;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+    box-shadow: 0px 10px 20px black;
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-5%);
+    } to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.to-do-app h1 {
+    text-align: center;
+    color: #1eff4f;
+}
+
+.to-do-app p {
+    text-align: center;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+.add-task {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+.add-task input {
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 500px;
+    width: 100%;
+}
+
+.add-task button {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    background-color: #00a824;
+    cursor: pointer;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+ul li {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #6f6988;
+    padding: 10px 8px;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+ul li:hover {
+    background-color: #00778b;
+    transition: 0.3s;
+}
+
+ul li .task-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #00e1ff;
+    cursor: pointer;
+}
+
+.task-checkbox:checked {
+    background-color: #00e1ff;
+    border-color: #00414d;
+}
+
+.task-checkbox:checked:after {
+    content: "\2713";
+    color: #3d0c7e;
+    font-size: 15px;
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}
+
+ul li .remove-btn {
+    padding: 12px;
+    position: absolute;
+    right: 0px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 2px 6px black;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+ul .task-item.completed span {
+    text-decoration: line-through;
+    color: #acacac;
+}
