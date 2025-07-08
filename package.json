@@ -1,7 +1,6 @@
 {
   "homepage": "https://github.com/rameshyumnam/To-do-list.git",
   "name": "to-do-app",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
